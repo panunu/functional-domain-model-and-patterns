@@ -38,20 +38,8 @@ object Business {
   type CreateCustomer = (CustomerIdentifier, Option[Address]) => Option[Customer]
   type Register = CreateAccount => CreateCustomer
 
-  /*
-  def createAccount(username: Username): Option[Account] = {
-    Some(Account(username, "generatedPassword"))
-  }
-
-  def createCustomer(id: CustomerIdentifier, address: Option[Address]): Option[Customer] = {
-    Some(
-      address match {
-        case Some(address: Address) => CustomerWithAddress(id, address)
-        case None => CustomerWithoutAddress(id)
-      }
-    )
-  }
-   */
+  // Higher level, process-related inputs.
+  /*case class RegistrationInput()*/
 
   // Functional composition? Kleislilosowski? RWO?
   /*def register(username: String, customerIdentifier: String, address: String) = {
